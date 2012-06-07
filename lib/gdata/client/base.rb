@@ -81,7 +81,7 @@ module GData
         response = service.make_request(request)
         
         case response.status_code  
-        when 200, 201, 302
+        when 200, 201, 302, 308
           #Do nothing, it's a success.
         when 401, 403
           raise AuthorizationError.new(response)
